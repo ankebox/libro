@@ -15,16 +15,18 @@ public class Libro {
     private int numeroPaginas;
     private String numeroReferencia;
     private int vecesPrestado;
+    private boolean esLibroDeTexto;
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroPaginasLibro)
+    public Libro(String autorLibro, String tituloLibro, int numeroPaginasLibro, boolean esLibroDeTextoDe)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroPaginasLibro;
         numeroReferencia = "";
         vecesPrestado = 0;
+        esLibroDeTexto = esLibroDeTextoDe;
     }
 
     public String getAutor(){
@@ -49,10 +51,10 @@ public class Libro {
     
     public void imprimirDetalles(){
         if(numeroReferencia != ""){
-            System. out. println("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas + " Numero referencia, " + numeroReferencia + " Veces prestado, " + vecesPrestado);
+            System. out. println("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas + " Numero referencia, " + numeroReferencia + " Veces prestado, " + vecesPrestado + " Es un libro de texto?, " + esLibroDeTexto);
         }
         else{
-            System. out. println("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas + " Numero referencia, ZZZ  Veces prestado, " + vecesPrestado);
+            System. out. println("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas + " Numero referencia, ZZZ  Veces prestado, " + vecesPrestado + " Es un libro de texto?, " + esLibroDeTexto);
         }
     }
     
@@ -64,7 +66,7 @@ public class Libro {
         else{
             aDevolver = "ZZZ";
         }
-        return ("Titulo, " + titulo + " Autor, " + autor + " Numero de paginas, " + numeroPaginas + " Numero referencia, " + aDevolver + " Veces Prestado, " + vecesPrestado);
+        return ("Titulo, " + titulo + " Autor, " + autor + " Numero de paginas, " + numeroPaginas + " Numero referencia, " + aDevolver + " Veces Prestado, " + vecesPrestado + " Es un libro de texto?, " + esLibroDeTexto);
     }
     
     public String getNumeroReferencia(){
@@ -88,4 +90,7 @@ public class Libro {
         return vecesPrestado;
     }
     
+    public boolean getEsLibroDeTexto(){
+        return esLibroDeTexto;
+    }
 }
