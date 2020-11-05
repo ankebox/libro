@@ -42,4 +42,12 @@ public class Libro {
     public int muestraNumeroPaginas(){
         return numeroPaginas;
     }
+    
+    public void imprimirDetalles(){
+        System. out. println("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas);
+    }
+    
+    public String getDetalles(){ 
+        return ("Titulo, " + titulo + "  Autor, " + autor + "  Numero de paginas, " + numeroPaginas);
+    }
 }
